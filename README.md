@@ -47,7 +47,7 @@ checkb = checkbox(color, x, y, width, height)
 ```
 #### Optional arguments:
 * ```outline```
-* ```check```: if the box starts checked or not, ```boolean```
+* ```check```: if the box starts checked or not (```boolean```)
 * ```text```
 * ```size```
 * ```font``` 
@@ -55,5 +55,7 @@ checkb = checkbox(color, x, y, width, height)
 
 #### Interacting with a checkbox:
 Like the button, you can use the ```isOver(pos)``` function to check if a given position is over the box.
+
 The ```convert()``` function changes the state of the box, from checked to unchecked or vice versa. Most likely you will want to use this function alongside the ```isOver(pos)``` function and the ```pygame.MOUSEBUTTONDOWN``` event.
+
 The ```isChecked()``` function returns the current state of the box (```True``` if checked, ```False``` otherwise)
