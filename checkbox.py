@@ -18,8 +18,8 @@ class checkbox():
         self.textGap = textGap
     #Draws the checkbox
     def draw(self, win):
-        but = button(self.color, self.x, self.y, self.width, self.height)
-        but.draw(win, self.outline)
+        but = button(self.color, self.x, self.y, self.width, self.height, outline=self.outline)
+        but.draw(win)
 
         if self.text != "":
             text = self.font.render(self.text, 1, (0, 0, 0))

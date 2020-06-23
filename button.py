@@ -2,7 +2,7 @@ import pygame
 
 #Button class, the optional parameters correspond to the text displayed, its size and font
 class button():
-    def __init__(self, color, x, y, width, height, text="", size=60, font=None):
+    def __init__(self, color, x, y, width, height, text="", size=60, font=None, outline=0):
         self.color = color
         self.x = x
         self.y = y
@@ -11,10 +11,11 @@ class button():
         self.text = text
         self.size = size
         self.font = pygame.font.SysFont(font, size)
+        self.outline = outline
 
     #Draws the button, outline may be provided
-    def draw(self, win, outline=0):
-        pygame.draw.rect(win, self.color, (self.x, self.y, self.width, self.height), outline)
+    def draw(self, win):
+        pygame.draw.rect(win, self.color, (self.x, self.y, self.width, self.height), self.outline)
 
         if self.text != "":
             text = self.font.render(self.text, 1, (0, 0, 0))
