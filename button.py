@@ -20,6 +20,6 @@ class button():
             text = self.font.render(self.text, 1, (0, 0, 0))
             win.blit(text, (self.x + (self.width/2 - text.get_width()/2), self.y + (self.height/2 - text.get_height()/2)))
 
-    #Returns true is the given pos (either tuple or list) is over the button
+    #Returns true if the given pos (either tuple or list) is over the button
     def isOver(self, pos):
             return pos[0] > self.x and pos[0] < self.x + self.width and pos[1] > self.y and pos[1] < self.y + self.height
