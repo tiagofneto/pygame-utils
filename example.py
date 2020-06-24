@@ -1,8 +1,7 @@
 import sys
 import pygame
-import button
-import checkbox
- 
+import PygameUtils as pu
+
 pygame.init()
  
 fps = 60
@@ -12,8 +11,8 @@ width, height = 640, 480
 win = pygame.display.set_mode((width, height))
 WHITE = (255, 255, 255)
 
-but1 = button.button((142, 87, 230), 100, 100, 100, 100, "Button", 30)
-checkb1 = checkbox.checkbox((100, 100, 100), 300, 300, 100, 100, text="Checkbox", outline=3)
+but1 = pu.button((142, 87, 230), 100, 100, 100, 100, "Button", 30)
+checkb1 = pu.checkbox((100, 100, 100), 300, 300, 100, 100, text="Checkbox", outline=3)
 
 def update():
     pass

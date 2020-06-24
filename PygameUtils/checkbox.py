@@ -1,5 +1,5 @@
 import pygame
-from button import button
+from .button import button
 
 #CheckBox class, works similarly to the Button class
 #The textGap parameter corresponds to the gap between the text and the box
